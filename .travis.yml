@@ -5,9 +5,13 @@ before_install:
 - openssl aes-256-cbc -K $encrypted_f635dc9b0bb1_key -iv $encrypted_f635dc9b0bb1_iv
   -in id_rsa_nginfinite.enc -out id_rsa_nginfinite -d
 - sh -e /etc/init.d/xvfb start
+env:
+  global:
+  - ENCRYPTION_LABEL: f635dc9b0bb1
 before_script:
 - export DISPLAY=:99.0
 - until xwininfo -root > /dev/null 2>&1; do echo "waiting for xvfb"; done
 cache:
   directories:
   - node_modules
+script: bash ./make-bower-build.sh
