@@ -8,6 +8,7 @@ before_install:
 env:
   global:
   - ENCRYPTION_LABEL: f635dc9b0bb1
+  - COMMIT_AUTHOR_EMAIL: ''
 before_script:
 - export DISPLAY=:99.0
 - until xwininfo -root > /dev/null 2>&1; do echo "waiting for xvfb"; done

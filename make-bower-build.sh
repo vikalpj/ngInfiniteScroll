@@ -2,7 +2,7 @@
 set -e # Exit with nonzero exit code if anything fails
 
 SOURCE_BRANCH="master"
-TARGET_BRANCH="testBower"
+TARGET_BRANCH="master"
 
 # Run only test cases if this is not a release
 if [ -z "$TRAVIS_TAG" ]; then
@@ -23,7 +23,7 @@ chmod 600 deploy_key
 eval `ssh-agent -s`
 ssh-add deploy_key
 
-BOWER_REPO='git@github.com:vikalpj/ngInfiniteScroll-bower.git'
+BOWER_REPO='git@github.com:sroze/ngInfiniteScroll-bower.git'
 
 BOWER_REPO_DIR='out'
 CWD="$PWD"
