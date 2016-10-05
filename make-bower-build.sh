@@ -23,7 +23,7 @@ chmod 600 deploy_key
 eval `ssh-agent -s`
 ssh-add deploy_key
 
-BOWER_REPO='git@github.com:sroze/ngInfiniteScroll-bower.git'
+BOWER_REPO='git@github.com:ng-infinite-scroll/ng-infinite-scroll-bower.git'
 
 BOWER_REPO_DIR='out'
 CWD="$PWD"
